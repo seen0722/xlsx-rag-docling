@@ -1,0 +1,4 @@
+docling==2.150.1
+openpyxl==3.1.5
+pillow==13.0.0
+ocrmac==1.0.1; sys_platform == "darwin"
