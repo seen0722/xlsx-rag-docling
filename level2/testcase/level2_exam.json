@@ -1,0 +1,554 @@
+[
+  {
+    "id": 1,
+    "image": "01",
+    "category": "合併儲存格+多層表頭",
+    "question": "Android 15 的 T11 CTS fail 數是多少？",
+    "answer": "14",
+    "source": "圖1",
+    "check": {
+      "type": "cell",
+      "row": "T11",
+      "offset": 3,
+      "accept": [
+        "14"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "image": "01",
+    "category": "合併儲存格+多層表頭",
+    "question": "Android 15 的 T12-Pro VTS fail 數是多少？",
+    "answer": "5",
+    "source": "圖1",
+    "check": {
+      "type": "cell",
+      "row": "T12-Pro",
+      "offset": 4,
+      "accept": [
+        "5"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "image": "01",
+    "category": "合併儲存格+多層表頭",
+    "question": "Android 14 的 T10 VTS fail 數是多少？",
+    "answer": "3",
+    "source": "圖1",
+    "check": {
+      "type": "cell",
+      "row": "T10",
+      "offset": 2,
+      "accept": [
+        "3"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "image": "02",
+    "category": "無格線表格",
+    "question": "Idle 情境的平均電流是多少 mA？",
+    "answer": "145.7 mA",
+    "source": "圖2",
+    "check": {
+      "type": "cell",
+      "row": "Idle",
+      "offset": 1,
+      "accept": [
+        "145.7"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "image": "02",
+    "category": "無格線表格",
+    "question": "Video 情境持續多久（秒）？",
+    "answer": "1800 秒",
+    "source": "圖2",
+    "check": {
+      "type": "cell",
+      "row": "Video",
+      "offset": 2,
+      "accept": [
+        "1800"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "image": "02",
+    "category": "無格線表格",
+    "question": "Camera 情境的平均電流是多少 mA？",
+    "answer": "967.2 mA",
+    "source": "圖2",
+    "check": {
+      "type": "cell",
+      "row": "Camera",
+      "offset": 1,
+      "accept": [
+        "967.2"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "image": "03",
+    "category": "顏色表示狀態",
+    "question": "smoke test 中 T10 哪一項 FAIL？",
+    "answer": "Camera",
+    "source": "圖3",
+    "check": {
+      "type": "cell",
+      "row": "Camera",
+      "offset": 1,
+      "accept": [
+        "FAIL",
+        "✗",
+        "X",
+        "NG",
+        "紅"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "image": "03",
+    "category": "顏色表示狀態",
+    "question": "smoke test 中 T11 哪一項 FAIL？",
+    "answer": "Suspend/Resume",
+    "source": "圖3",
+    "check": {
+      "type": "cell",
+      "row": "Suspend/Resume",
+      "offset": 2,
+      "accept": [
+        "FAIL",
+        "✗",
+        "X",
+        "NG",
+        "紅"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "image": "04",
+    "category": "特殊符號與單位",
+    "question": "Suspend 電流實測值是多少？",
+    "answer": "3.8 µA",
+    "source": "圖4",
+    "check": {
+      "type": "cell",
+      "row": "Suspend 電流",
+      "offset": 2,
+      "accept": [
+        "3.8µA",
+        "3.8μA",
+        "3.8uA"
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "image": "04",
+    "category": "特殊符號與單位",
+    "question": "充電效率驗證結果是通過還是不通過？",
+    "answer": "不通過（✗，83.2% < 85%）",
+    "source": "圖4",
+    "check": {
+      "type": "cell",
+      "row": "充電效率",
+      "offset": 3,
+      "accept": [
+        "✗",
+        "X",
+        "x",
+        "×",
+        "FAIL"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "image": "04",
+    "category": "特殊符號與單位",
+    "question": "電池實測容量是多少？",
+    "answer": "4,987 mAh",
+    "source": "圖4",
+    "check": {
+      "type": "cell",
+      "row": "電池容量",
+      "offset": 2,
+      "accept": [
+        "4,987mAh"
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "image": "04",
+    "category": "特殊符號與單位",
+    "question": "溫升實測值是多少？",
+    "answer": "12.5 ℃",
+    "source": "圖4",
+    "check": {
+      "type": "cell",
+      "row": "溫升",
+      "offset": 2,
+      "accept": [
+        "12.5℃",
+        "12.5°C"
+      ]
+    }
+  },
+  {
+    "id": 13,
+    "image": "05",
+    "category": "易混字元",
+    "question": "序號 1 的料號是什麼？",
+    "answer": "B01-O8（O 是英文字母）",
+    "source": "圖5",
+    "check": {
+      "type": "cell",
+      "row": "1",
+      "offset": 1,
+      "accept": [
+        "B01-O8"
+      ]
+    }
+  },
+  {
+    "id": 14,
+    "image": "05",
+    "category": "易混字元",
+    "question": "序號 2 的批號是什麼？",
+    "answer": "O0-Q9",
+    "source": "圖5",
+    "check": {
+      "type": "cell",
+      "row": "2",
+      "offset": 2,
+      "accept": [
+        "O0-Q9"
+      ]
+    }
+  },
+  {
+    "id": 15,
+    "image": "05",
+    "category": "易混字元",
+    "question": "序號 2 的最低溫度是多少？",
+    "answer": "-12.5 ℃",
+    "source": "圖5",
+    "check": {
+      "type": "cell",
+      "row": "2",
+      "offset": 3,
+      "accept": [
+        "-12.5"
+      ]
+    }
+  },
+  {
+    "id": 16,
+    "image": "05",
+    "category": "易混字元",
+    "question": "序號 3 的批號是什麼？",
+    "answer": "I1l-60（大寫 I、數字 1、小寫 l）",
+    "source": "圖5",
+    "check": {
+      "type": "cell",
+      "row": "3",
+      "offset": 2,
+      "accept": [
+        "I1l-60"
+      ]
+    }
+  },
+  {
+    "id": 17,
+    "image": "06",
+    "category": "低解析度+JPEG",
+    "question": "SMT 站的良率是多少？",
+    "answer": "98.72%",
+    "source": "圖6",
+    "check": {
+      "type": "cell",
+      "row": "SMT",
+      "offset": 2,
+      "accept": [
+        "98.72%"
+      ]
+    }
+  },
+  {
+    "id": 18,
+    "image": "06",
+    "category": "低解析度+JPEG",
+    "question": "FATP 站投入多少台？",
+    "answer": "1232",
+    "source": "圖6",
+    "check": {
+      "type": "cell",
+      "row": "FATP",
+      "offset": 1,
+      "accept": [
+        "1232"
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "image": "06",
+    "category": "低解析度+JPEG",
+    "question": "OQC 站的良率是多少？",
+    "answer": "99.40%",
+    "source": "圖6",
+    "check": {
+      "type": "cell",
+      "row": "OQC",
+      "offset": 2,
+      "accept": [
+        "99.40%"
+      ]
+    }
+  },
+  {
+    "id": 20,
+    "image": "07",
+    "category": "手機翻拍",
+    "question": "v1.1.0 的 Build ID 是什麼？",
+    "answer": "UKQ1.261002.003",
+    "source": "圖7",
+    "check": {
+      "type": "cell",
+      "row": "v1.1.0",
+      "offset": 2,
+      "accept": [
+        "UKQ1.261002.003"
+      ]
+    }
+  },
+  {
+    "id": 21,
+    "image": "07",
+    "category": "手機翻拍",
+    "question": "v1.2.0 是哪一天發布的？",
+    "answer": "2026-11-05",
+    "source": "圖7",
+    "check": {
+      "type": "cell",
+      "row": "v1.2.0",
+      "offset": 1,
+      "accept": [
+        "2026-11-05"
+      ]
+    }
+  },
+  {
+    "id": 22,
+    "image": "08",
+    "category": "Excel 截圖含 UI",
+    "question": "T11 的 ROM 容量是多少？",
+    "answer": "128GB",
+    "source": "圖8",
+    "check": {
+      "type": "cell",
+      "row": "T11",
+      "offset": 2,
+      "accept": [
+        "128GB"
+      ]
+    }
+  },
+  {
+    "id": 23,
+    "image": "08",
+    "category": "Excel 截圖含 UI",
+    "question": "T12-Pro 的售價是多少？",
+    "answer": "NT$15,990",
+    "source": "圖8",
+    "check": {
+      "type": "cell",
+      "row": "T12-Pro",
+      "offset": 3,
+      "accept": [
+        "15,990"
+      ]
+    }
+  },
+  {
+    "id": 24,
+    "image": "08",
+    "category": "Excel 截圖含 UI",
+    "question": "T10 的 RAM 是多少？",
+    "answer": "4GB",
+    "source": "圖8",
+    "check": {
+      "type": "cell",
+      "row": "T10",
+      "offset": 1,
+      "accept": [
+        "4GB"
+      ]
+    }
+  },
+  {
+    "id": 25,
+    "image": "09",
+    "category": "密集大表",
+    "question": "TC-013 在 T11 的數值是多少 ms？",
+    "answer": "74.0",
+    "source": "圖9",
+    "check": {
+      "type": "cell",
+      "row": "TC-013",
+      "offset": 3,
+      "accept": [
+        "74.0"
+      ]
+    }
+  },
+  {
+    "id": 26,
+    "image": "09",
+    "category": "密集大表",
+    "question": "TC-017 在 T13 的數值是多少 ms？",
+    "answer": "99.4",
+    "source": "圖9",
+    "check": {
+      "type": "cell",
+      "row": "TC-017",
+      "offset": 5,
+      "accept": [
+        "99.4"
+      ]
+    }
+  },
+  {
+    "id": 27,
+    "image": "09",
+    "category": "密集大表",
+    "question": "TC-020 在 T15 的數值是多少 ms？",
+    "answer": "31.1",
+    "source": "圖9",
+    "check": {
+      "type": "cell",
+      "row": "TC-020",
+      "offset": 7,
+      "accept": [
+        "31.1"
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "image": "10",
+    "category": "長條圖",
+    "question": "T11 的待機功耗大約是多少 mW？",
+    "answer": "約 35 mW",
+    "source": "圖10",
+    "check": {
+      "type": "contains",
+      "tokens": [
+        "35"
+      ]
+    }
+  },
+  {
+    "id": 29,
+    "image": "10",
+    "category": "長條圖",
+    "question": "T12-Pro 的待機功耗大約是多少 mW？",
+    "answer": "約 58 mW",
+    "source": "圖10",
+    "check": {
+      "type": "contains",
+      "tokens": [
+        "58"
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "image": "10",
+    "category": "長條圖",
+    "question": "T10 的待機功耗大約是多少 mW？",
+    "answer": "約 42 mW",
+    "source": "圖10",
+    "check": {
+      "type": "contains",
+      "tokens": [
+        "42"
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "image": "11",
+    "category": "流程圖",
+    "question": "開機流程中，Kernel 的前一個階段是什麼？",
+    "answer": "ABL/UEFI",
+    "source": "圖11",
+    "check": {
+      "type": "order",
+      "tokens": [
+        "Power Key",
+        "PBL",
+        "XBL",
+        "ABL",
+        "Kernel",
+        "init"
+      ]
+    }
+  },
+  {
+    "id": 32,
+    "image": "11",
+    "category": "流程圖",
+    "question": "XBL 開機失敗時會進入什麼模式？",
+    "answer": "EDL mode",
+    "source": "圖11",
+    "check": {
+      "type": "contains",
+      "tokens": [
+        "EDL"
+      ]
+    }
+  },
+  {
+    "id": 33,
+    "image": "12",
+    "category": "紅框箭頭標註",
+    "question": "issue 清單中被紅框標註的是哪一項？",
+    "answer": "Camera 黑屏",
+    "source": "圖12",
+    "check": {
+      "type": "same_line",
+      "tokens": [
+        "Camera",
+        "紅框"
+      ]
+    }
+  },
+  {
+    "id": 34,
+    "image": "12",
+    "category": "紅框箭頭標註",
+    "question": "標註「需優先處理」的是哪一項？",
+    "answer": "Camera 黑屏（Critical，BSP 負責）",
+    "source": "圖12",
+    "check": {
+      "type": "same_line",
+      "tokens": [
+        "Camera",
+        "需優先處理"
+      ]
+    }
+  }
+]

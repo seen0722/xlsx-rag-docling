@@ -64,6 +64,37 @@ uv pip install --python .venv/bin/python -r requirements.txt
 
 The `keywords` field supports automated scoring: an answer counts as correct only if it contains every keyword. Refusal answers vary in wording, so score those by hand or with an LLM judge.
 
+## Level 2: 12 image types (34 questions)
+
+`level2/` stress-tests the hybrid converter with harder images that are common in real enterprise files. Every question is checked against the converted md and gets one of three results:
+
+- **PASS**: the value is in the correct row and column.
+- **STRUCT**: the value appears, but the table structure is lost or wrong.
+- **MISS**: the value is missing or misread.
+
+```bash
+.venv/bin/python level2/make_level2.py level2/testcase
+.venv/bin/python xlsx2md_docling.py level2/testcase/level2.xlsx level2/output/level2.md
+.venv/bin/python level2/grade_level2.py level2/output/level2.md level2/testcase/level2_exam.json level2/output/report.md
+```
+
+| # | Image type | Pass | What went wrong |
+|---|---|---|---|
+| 01 | Merged cells + two-level header | 3/3 | Nothing |
+| 02 | Table without gridlines | 3/3 | Nothing |
+| 03 | PASS/FAIL shown only by cell color | 0/2 | Color is lost; the table also collapses into a word list |
+| 04 | Symbols and units (µA, ℃, ±, ✓/✗) | 2/4 | `µA` → `HA`, ✓/✗ dropped, `±` → `+` |
+| 05 | Confusable characters (O/0, I/1/l) | 1/4 | `B01-O8` → `B01-08`, `I1l-60` → `111-60`. **These errors are silent** |
+| 06 | Low resolution + JPEG compression | 0/3 | Table structure lost; `97.15%` → `97 15%`, `OQC` → `OOC` |
+| 07 | Phone photo of a screen | 0/2 | Text OCR is correct, but the table is not detected |
+| 08 | Excel screenshot with UI | 3/3 | Nothing; row numbers and column letters did not leak into the table |
+| 09 | Dense table (20 × 8, small font) | 3/3 | Nothing |
+| 10 | Bar chart without value labels | 0/3 | Only the title is extracted |
+| 11 | Flowchart (snake layout) | 1/2 | Box text is extracted; arrow order is lost |
+| 12 | Red box + arrow annotation | 1/2 | Arrow note text lands on the right line; the red box is lost |
+
+**Total: 17/34 (50%).** Clean tables (01, 02, 08, 09) are reliable. Information carried by color, shape or position (03, 10, 11, 12), real-world capture quality (06, 07), and character-level details (04, 05) need a VLM or manual review.
+
 ## Caveats
 
 - **macOS only as written:** the OCR engine is `ocrmac` (Apple Vision), and `make_testcase.py` uses a macOS CJK font. On Linux, use `EasyOcrOptions` or `RapidOcrOptions` and check how well they handle Traditional Chinese.
